@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Digital Currency</title>
+</head>
+<body>
+    <h1>Enter the amount for digital currency:</h1>
+    <form action="/search" method="post">
+        <input type="hidden" name="mode" value="digital"/>
+        <input type="number" name="amount" required/>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Acknowledgment</title>
+</head>
+<body>
+    <h1 th:text="${message}"></h1>
+    <p>Your Request ID: <span th:text="${requestId}"></span></p>
+    <form action="/" method="get">
+        <button type="submit">Acknowledge</button>
+    </form>
+</body>
+</html>

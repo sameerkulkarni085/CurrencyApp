@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Physical Currency</title>
+</head>
+<body>
+    <h1>Enter the amount for physical currency:</h1>
+    <form action="/search" method="post">
+        <input type="hidden" name="mode" value="physical"/>
+        <input type="number" name="amount" required/>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
