@@ -1,0 +1,30 @@
+<!-- filepath: src/main/resources/templates/currency-selection.html -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Currency Selection</title>
+    </head>
+    <body>
+        <h1>Select Currency Type</h1>
+        <form th:action="@{/currency-selection}" method="post">
+            <div>
+                <label>
+                    Select Currency Type:
+                    <select name="currencyType">
+                        <option value="physical">Physical</option>
+                        <option value="digital">Digital</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>Amount: <input type="number" name="amount" step="0.01" required/></label>
+            </div>
+            <div>
+                <input type="submit" value="Submit"/>
+            </div>
+        </form>
+        <div th:if="${result}">
+            <p th:text="${result}"></p>
+        </div>
+    </body>
+</html>

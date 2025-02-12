@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Physical Options</title>
+</head>
+<body>
+    <h1>Do you want to receive currency digitally?</h1>
+    <p>Click proceed button to move forward.</p>
+    <form th:action="@{/proceed}" method="get">
+        <button type="submit">Proceed</button>
+    </form>
+</body>
+</html>

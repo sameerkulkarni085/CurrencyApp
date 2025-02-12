@@ -1,10 +1,10 @@
-package com.springboot.myApp;
+package com.microapp2.Micro.App;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MyAppApplicationTests {
+class MicroAppApplicationTests {
 
 	@Test
 	void contextLoads() {

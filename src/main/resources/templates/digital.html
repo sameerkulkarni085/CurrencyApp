@@ -1,14 +1,21 @@
+<!-- filepath: src/main/resources/templates/digital.html -->
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Digital Currency</title>
-</head>
-<body>
-    <h1>Enter the amount for digital currency:</h1>
-    <form action="/search" method="post">
-        <input type="hidden" name="mode" value="digital"/>
-        <input type="number" name="amount" required/>
-        <button type="submit">Search</button>
-    </form>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Digital Currency</title>
+    </head>
+    <body>
+        <h1>Digital Currency User</h1>
+        <form th:action="@{/digital}" method="get">
+            <div>
+                <label>Amount: <input type="number" name="amount" step="0.01" required/></label>
+            </div>
+            <div>
+                <input type="submit" value="Submit"/>
+            </div>
+        </form>
+        <div th:if="${result}">
+            <p th:text="${result}"></p>
+        </div>
+    </body>
 </html>
