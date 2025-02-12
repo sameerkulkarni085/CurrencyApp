@@ -17,7 +17,7 @@ public class WebSecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/", "/home", "/login", "/doLogin", "/physical-options", "/digital-options", "/css/**", "/js/**").permitAll()
+                .requestMatchers("/", "/home", "/login", "/doLogin", "/physical-options", "/digital-options", "/currency-entry", "/css/**", "/js/**").permitAll()
                 .anyRequest().authenticated()
             )
             // Optionally disable formLogin if you want to handle authentication manually:
